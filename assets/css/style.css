@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Young+Serif&display=swap');
+
+:root{
+--nutmeg: hsl(14, 45%, 36%);
+--dark-raspberry: hsl(332, 51%, 32%);
+--white: hsl(0, 0%, 100%);
+--rose-white: hsl(330, 100%, 98%);
+--eggshell: hsl(30, 54%, 90%);
+--light-grey: hsl(30, 18%, 87%);
+--brown: hsl(30, 10%, 34%);
+--dark-charcoal: hsl(24, 5%, 18%);
+
+--img-height: 15rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+
+    --rounded: 12px;
+}
+img{
+    max-width: 100%;
+}
+
+body{
+    font-size: 16px;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background-color: var(--eggshell);
+    line-height: 1.5em;
+}
+h1,h2,h3,h4{
+    color: var(--dark-raspberry);
+    font-family: 'Young Serif', serif;
+}
+hr{
+    border-bottom: 1px solid var(--light-grey);
+    opacity: 0.5;
+}
+
+.card{
+    background-color: var(--white);
+    width: 40em;
+    padding: 2rem;
+    margin: 10% 0;
+    border-radius: var(--rounded);
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+.recipe-title>img{
+    border-radius: var(--rounded);
+}
+.recipe-title{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.recipe-title h1{
+    font-size: 2rem;
+}
+.prep-time{
+    background-color: var(--rose-white);
+    border-radius: var(--rounded);
+    padding: 1em;
+}
+.prep-time h4{
+    font-family: 'Outfit', sans-serif;
+}
+ul,
+ol{
+    display: block;
+    margin-top: .5em;
+    margin-left: 1.5em;
+}
+ol li,
+ul li{
+    padding-right: 2ch;
+    margin-bottom: .6em;
+    position: relative;
+    padding-left: 1em;
+}
+ul li::marker,
+ol li::marker{
+    color: var(--dark-raspberry);
+}
+em{
+    font-style: normal;
+    font-weight: 600;
+}
+section>h2{
+    margin-bottom: 1em;
+}
+table{
+    width: 100%;
+    border-spacing: .5em;
+    border-collapse: collapse;
+}
+table td{
+    width: 50%;
+    padding: 1em 0;
+}
+table tr{
+    border-bottom: 1px solid var(--light-grey);
+    background-color: transparent;
+}
+table tr:hover{
+    background-color: var(--light-grey);
+    transition: background-color .2s;
+}
+table tr td:nth-of-type(1){
+    text-indent: 2em;
+}
+table tr td:nth-of-type(2){
+    color: var(--dark-raspberry);
+    font-weight: 600;
+}
+
+@media (max-width: 600px){
+    body{
+        overflow-x: hidden;
+    }
+    .card{
+        width: 100vw;
+        margin: 0;
+        padding-top: 17rem;
+    }
+    .recipe-title>img{
+        max-height: var(--img-height);
+        position: absolute;
+        border-radius: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
