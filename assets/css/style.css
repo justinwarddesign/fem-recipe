@@ -55,6 +55,7 @@ hr{
 }
 .recipe-title>img{
     border-radius: var(--rounded);
+    padding-bottom: 1rem;
 }
 .recipe-title{
     display: flex;
