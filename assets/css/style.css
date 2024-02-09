@@ -32,6 +32,7 @@ body{
     min-height: 100vh;
     background-color: var(--eggshell);
     line-height: 1.5em;
+    color: var(--dark-charcoal);
 }
 h1,h2,h3,h4{
     color: var(--dark-raspberry);
@@ -44,26 +45,27 @@ hr{
 
 .card{
     background-color: var(--white);
-    width: 40em;
+    width: 50em;
     padding: 2rem;
-    margin: 10% 0;
+    margin: 15% 0;
     border-radius: var(--rounded);
     display: flex;
     flex-direction: column;
     gap: 2em;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
 }
-.recipe-title>img{
-    border-radius: var(--rounded);
-    padding-bottom: 1rem;
-}
 .recipe-title{
     display: flex;
     flex-direction: column;
-    gap: 1em;
+}
+.recipe-title>img{
+    margin-bottom: 4rem;
 }
 .recipe-title h1{
-    font-size: 2rem;
+    font-size: 2.7rem;
+    color: var(--dark-charcoal);
+    margin-bottom: 2rem;
+    line-height: 1.2em;
 }
 .prep-time{
     background-color: var(--rose-white);
